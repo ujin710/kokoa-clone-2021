@@ -1,0 +1,75 @@
+.talk-screen {
+  background-color: var(--pink);
+  height: 11000vh;
+}
+
+.talk-screen .status-bar,
+.talk-screen .alt-header {
+  top: 0;
+  position: fixed;
+  width: 100%;
+  box-sizing: border-box;
+  background-color: var(--pink);
+}
+
+.talk-screen .status-bar {
+  z-index: 2;
+}
+
+.talk-screen .alt-header {
+  z-index: 1;
+}
+
+.main-chat {
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.chat__timestamp {
+  color: white;
+  background-color: rgba(189, 154, 177, 0.8);
+  padding: 13px;
+  border-radius: 25px;
+  font-size: 13px;
+  margin-bottom: 25px;
+}
+
+.message-row {
+  width: 100%;
+  display: flex;
+}
+
+.message-row img {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 40%;
+  margin-right: 10px;
+}
+
+.message__author {
+  margin-bottom: 5px;
+  display: block;
+}
+
+.message__bubble {
+  background-color: white;
+  padding: 8px 13px;
+  border-radius: 13px;
+  margin-right: 5px;
+  border-top-left-radius: 0px;
+  font-size: 18px;
+}
+
+.message__info {
+  display: flex;
+  align-items: flex-end;
+}
+
+.message__author,
+.message__time {
+  opacity: 0.8;
+  font-size: 14px;
+}

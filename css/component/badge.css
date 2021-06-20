@@ -1,0 +1,17 @@
+.badge {
+  background-color: lightblue;
+  width: 30px;
+  height: 30px;
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 600;
+}
+
+.badge_position {
+  position: relative;
+  left: 5px;
+  margin-top: 2px;
+  color: white;
+}

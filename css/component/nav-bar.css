@@ -1,0 +1,36 @@
+.nav {
+  background-color: var(--pink);
+  padding: 20px 50px;
+  border-top: 1px solid rgba(255, 82, 82, 0.3);
+  position: fixed;
+  bottom: 0px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.nav__list {
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav__link {
+  color: white;
+  position: relative;
+}
+
+.nav__ellipsis-Alarm {
+  background-color: lightblue;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  display: flex;
+  position: absolute;
+  left: 32px;
+  bottom: 22px;
+}
+
+.nav__notification {
+  position: absolute;
+  left: 15px;
+  top: -25px;
+}

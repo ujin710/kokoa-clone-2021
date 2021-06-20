@@ -1,0 +1,31 @@
+@import "reset.css";
+@import url("https://fonts.googleapis.com/css2?family=Jua&display=swap");
+@import "component/status-bar.css";
+@import "variables.css";
+@import "screen/login.css";
+@import "component/nav-bar.css";
+@import "component/screen-header.css";
+@import "component/alt-screen-header.css";
+@import "screen/friend.css";
+@import "component/user-component.css";
+@import "component/badge.css";
+@import "screen/find.css";
+@import "component/icon.css";
+@import "screen/more.css";
+@import "screen/setting.css";
+@import "screen/talk.css";
+
+body {
+  font-family: "Jua", sans-serif;
+  height: 1000vh;
+  padding-top: 20px;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.main-screen {
+  padding: 0px var(--horixontal-space);
+}
