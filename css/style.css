@@ -2,6 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Jua&display=swap");
 @import "component/status-bar.css";
 @import "variables.css";
+@import "component/no-mobile.css";
 @import "screen/login.css";
 @import "component/nav-bar.css";
 @import "component/screen-header.css";

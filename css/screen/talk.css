@@ -1,6 +1,6 @@
 .talk-screen {
   background-color: var(--pink);
-  height: 11000vh;
+  height: 550vh;
 }
 
 .talk-screen .status-bar,
@@ -20,11 +20,23 @@
   z-index: 1;
 }
 
+@keyframes fadein {
+  from {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  to {
+    transform: none;
+    opacity: 1;
+  }
+}
+
 .main-chat {
-  margin-top: 100px;
+  margin-top: 160px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  animation: fadein 0.3s linear;
 }
 
 .chat__timestamp {
@@ -39,9 +51,10 @@
 .message-row {
   width: 100%;
   display: flex;
+  margin-bottom: 25px;
 }
 
-.message-row img {
+.message-row img:not(.talk-img) {
   width: 50px;
   height: 50px;
   object-fit: cover;
@@ -72,4 +85,101 @@
 .message__time {
   opacity: 0.8;
   font-size: 14px;
+}
+
+.message-row--own {
+  justify-content: flex-end;
+}
+
+.message-row--own .message__bubble {
+  background-color: rgb(221, 255, 253);
+  border-top-right-radius: 0px;
+  border-top-left-radius: 15px;
+  margin-right: 0px;
+  margin-left: 5px;
+}
+
+.message-row--own .message__info {
+  flex-direction: row-reverse;
+}
+
+.talk-img {
+  height: 120px;
+  width: 120px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.main-screen .user-component {
+  margin-bottom: 13px;
+}
+
+.reply {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 25px;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.reply .reply__column:first-child {
+  width: 10%;
+}
+.reply .reply__column:last-child {
+  width: 90%;
+  position: relative;
+}
+.reply input {
+  padding: 5px;
+  height: 30px;
+  width: 100%;
+  border: var(--main-border);
+  border-radius: 20px;
+  transition: all 0.3s ease-in-out;
+}
+.reply__column:last-child > i,
+.reply__column:last-child button {
+  position: absolute;
+  right: -5px;
+  top: 5px;
+}
+
+.reply__column:last-child > i {
+  right: 38px;
+  top: 14px;
+}
+.reply__column button {
+  background-color: var(--pink);
+  border: none;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+.reply__column button i {
+  opacity: 1;
+}
+
+.reply__column button:focus .reply__column button:active {
+  outline: none;
+}
+
+.reply .reply__column:first-child,
+.reply .fa-laugh,
+.reply button {
+  transition: opacity 0.3 ease-in-out;
+}
+
+.reply:focus-within .reply__column:first-child,
+.reply:focus-within .fa-laugh,
+.reply:focus-within button {
+  opacity: 0;
+}
+
+.reply:focus-within input {
+  width: 98vw;
+  transform: translateX(-13%);
 }

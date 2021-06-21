@@ -7,6 +7,7 @@
   height: 70px;
   border-radius: 40%;
   margin-right: 20px;
+  object-fit: cover;
 }
 
 .user-component {
